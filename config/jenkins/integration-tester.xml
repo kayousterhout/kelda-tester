@@ -63,7 +63,7 @@ mkdir ${WORKSPACE}/bin
 cp ${srcPath}/quilt_linux ${WORKSPACE}/bin/quilt
 chmod 755 ${WORKSPACE}/bin/quilt
 
-cd ${srcPath}/quilt-tester
+cd ${srcPath}/integration-tester
 go build .
 make tests
 
@@ -72,7 +72,7 @@ if [ "${USE_TLS}" = "true" ] ; then
   quilt -v setup-tls "${TLS_DIR}"
 fi
 
-./quilt-tester --preserve-failed -testRoot=./tests -junitOut=${WORKSPACE}/report.xml</command>
+./integration-tester --preserve-failed -testRoot=./tests -junitOut=${WORKSPACE}/report.xml</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

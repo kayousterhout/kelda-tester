@@ -8,7 +8,7 @@ const path = require('path');
 // user) before starting Jenkins.
 const jenkinsStagingDir = '/tmp/files/';
 
-const releaserKeyPath = '~/jobs/quilt-tester/releaserKey';
+const releaserKeyPath = '~/jobs/integration-tester/releaserKey';
 
 /**
  * trimPrefix removes `prefix` from `str` if it begins with `prefix`.
@@ -74,9 +74,9 @@ function setupFiles(opts, scp) {
     readRel('config/jenkins/node.xml'));
   files.push(nodeConfig);
 
-  const knownHostsPath = '~/jobs/quilt-tester/known_hosts';
-  const quiltTesterConfig = new File('jobs/quilt-tester/config.xml',
-    applyTemplate(readRel('config/jenkins/quilt-tester.xml'),
+  const knownHostsPath = '~/jobs/integration-tester/known_hosts';
+  const quiltTesterConfig = new File('jobs/integration-tester/config.xml',
+    applyTemplate(readRel('config/jenkins/integration-tester.xml'),
       { slackTeam: opts.slackTeam,
         slackToken: opts.slackToken,
         slackChannel: opts.slackChannel,

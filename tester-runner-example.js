@@ -1,4 +1,4 @@
-// This file deploys a Jenkins instance running quilt-tester. It shows an example
+// This file deploys a Jenkins instance running integration-tester. It shows an example
 // of all paramters to `tester.New`. It uses a floating IP to automatically
 // configure `jenkinsUrl`.
 
@@ -21,7 +21,7 @@ const tester = new Tester({
   gcePrivateKey: 'privateKey',
   gceClientEmail: 'email',
   digitalOceanKey: 'key',
-  testingNamespace: 'quilt-tester',
+  testingNamespace: 'integration-tester',
   slackTeam: 'quilt-dev',
   slackChannel: '#testing',
   slackToken: 'secret',
