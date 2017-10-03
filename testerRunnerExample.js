@@ -31,4 +31,4 @@ const tester = new Tester({
   jenkinsUrl: `http://${worker.floatingIp}:8080`,
 });
 
-deployment.deploy(tester);
+tester.deploy(deployment);

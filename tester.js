@@ -73,8 +73,8 @@ class Tester {
   }
 
   deploy(deployment) {
-    deployment.deploy(this.scp);
-    deployment.deploy(this.jenkins);
+    this.scp.deploy(deployment);
+    this.jenkins.deploy(deployment);
   }
 
   /**
