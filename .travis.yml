@@ -13,7 +13,7 @@ before_script:
 
 script:
     - gulp lint
-    - ./quilt inspect ./tester-runner-example.js graphviz
+    - ./quilt inspect ./testerRunnerExample.js graphviz
 
 notifications:
     slack:
