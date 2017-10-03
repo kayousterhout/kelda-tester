@@ -1,6 +1,6 @@
 const quilt = require('@quilt/quilt');
 const jenkins = require('./jenkins.js');
-const SCPServer = require('./scp-server');
+const SCPServer = require('./scpServer');
 const sshpk = require('sshpk');
 
 const scpPort = 2222;
